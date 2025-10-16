@@ -1,0 +1,14 @@
+asgiref==3.9.1
+certifi==2025.8.3
+distlib==0.4.0
+Django==5.2.4
+django-crispy-forms==2.4
+django-jazzmin==3.0.1
+filelock==3.18.0
+packaging==25.0
+pillow==11.3.0
+pipenv==2025.0.4
+platformdirs==4.3.8
+sqlparse==0.5.3
+tzdata==2025.2
+virtualenv==20.33.1 

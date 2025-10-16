@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barkea-Contact</title>
+	<link 
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" 
+	rel="stylesheet" 
+	integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" 
+	crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="{% static 'CSS/barkea_contact.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">	
+</head>
+<body>
+	
+
+  <div id="navBox" class="m-0">
+
+    <a class="navbar-brand" href="#">
+      <img src="{% static "img/barkealogo.jpg"%}" alt="Avatar Logo" class="siteLogo">
+    </a>
+
+    <nav id="navBar" class="navbar fluid navbar-expand-sm animate__animated animate__fadeInRight">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarLinks">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="{% url "home" %}">Home</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="{% url "about" %}">Rreth nesh</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link active" href="{% url "contact" %}">Kontakt</a>
+            </li>
+            <li class="nav-item dropdown mx-4">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Vilat
+							</a>
+							<ul class="dropdown-menu">
+							{% for vila in vilat %}
+								<li><a class="dropdown-item" href="/{{ vila.slug }}/">{{ vila.main_title }}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+
+<h1 class="text-center mt-5 animate__animated animate__fadeInDown">Na kontaktoni</h1>
+    <h4 class="text-center mb-5 animate__animated animate__fadeInUp">Per çdo kerkesë ose projekt mos hezitoni !</h4>
+<div class="container">
+<form method="POST" class="w-75">
+  {% csrf_token %}
+    <div class="mb-3 w-100">
+      <label for="nameInput" class="form-label">Emër dhe Mbiemër</label>
+      <input type="text" name="name" class="form-control animate__animated animate__fadeIn animate__delay-0.5s"  aria-label="Username" aria-describedby="basic-addon1" id="nameInput">   
+    </div>
+
+    <div class="mb-3 w-100">
+      <label for="exampleFormControlInput1" class="form-label">Email</label>
+      <input type="email" name="email" class="form-control animate__animated animate__fadeIn animate__delay-0.5s" id="exampleFormControlInput1" >
+    </div>
+
+    <div class="mb-3 w-100">
+      <label for="exampleFormControlTextarea1" class="form-label">Dërgo nje mesazh</label>
+      <textarea class="form-control animate__animated animate__fadeIn animate__delay-0.5s" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+      
+    </div>
+    <div class="d-flex justify-content-center" >
+      <div class="col text-center">
+        {% if messages %}
+            {% for message in messages %}
+              {% if message.tags == 'error' %}
+                <h3 class="text-center w-100" style="color: red;">{{ message }}</h3>
+              {% elif message.tags == 'success' %}
+                <h3 class="text-center w-100" style="color: green;">{{ message }}</h3>
+              {% endif %}
+            {% endfor %}
+        {% endif %}
+        <button type="submit" class="btn animate__animated animate__fadeIn animate__delay-0.5s">Dergo</button>
+      </div>
+    </div>
+</form>
+</div>
+
+   <h1 class="text-center my-5 animate__animated animate__fadeInDown">Si mund të na gjeni</h1>
+
+  <div class="container my-5 d-flex justify-content-center animate__animated animate__fadeInUp" id="container">
+    <div class="d-flex row justify-content-center text-center text-dark w-75" id="row">
+      <div class="col-md-4">
+        <h4 class="mb-3">Tel./email</h4>
+        <p>Tel:{{reach_out.tel}}</p>
+        <p>whts:{{reach_out.whatsap}}</p>
+        <p>email:{{reach_out.email}}</p>
+      </div>
+      <div class="col-md-4">
+        <h4 class="mb-3">Rrjete Sociale</h4>
+        <p>Instagram:{{reach_out.instagram}}</p>
+        <p>TikTok:{{reach_out.tiktok}}</p>
+        <p>Facebook:{{reach_out.facebook}}</p>
+      </div>
+      <div class="col-md-4">
+        <h4 class="mb-3">Location</h4>
+        <p>{{reach_out.location}}</p>
+        <a href="{{reach_out.location_map}}" target="_blank">
+          <button class="btn">Live Map</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+<footer id="footer" class="text-center text-lg-start py-5">
+  <div class="container">
+	<div class="row text-center">
+		<label class="p-0">Developed by Dijon Albania.©</label>
+		<label class="p-0">Barkea Resort <span id="year"></span> All Rights Reserved</label>
+		<div class="d-flex justify-content-center align-items-center flex-row g-3">
+		<a href="{{ footer.instagram }}" target="_blank">
+			<i class="fa-brands fa-instagram mx-2"></i>
+		</a>	
+		<a href="{{ footer.facebook }}" target="_blank">
+			<i class="fa-brands fa-facebook mx-2"></i>
+		</a>
+		<a href="{{ footer.tiktok }}" target="_blank">
+			<i class="fa-brands fa-tiktok mx-2"></i>
+		</a>
+		</div>
+	</div>
+  </div>
+</footer>
+
+
+
+<script src="{% static "JS/main.js" %}"></script>
+  
+</body>
+</html>

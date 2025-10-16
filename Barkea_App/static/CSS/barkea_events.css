@@ -1,0 +1,128 @@
+body{
+  overflow-x: hidden;
+}
+
+
+
+
+#navBox { 
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding-left:1.5%;
+  padding-top: 10px;
+  top: 0;
+  z-index: 999;
+}
+
+#navBar {
+  flex-grow: 1;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5px 15px;
+  background-color: #173e62;
+  z-index: 1050;
+  
+}
+
+.navbar-nav{
+    margin: 0 ;
+}
+
+.dropdown{
+  position: relative;
+}
+.dropdown-menu {
+  z-index: 1050; 
+  position: absolute;
+}
+
+.dropdown-menu.show {
+  background-color: #154666;
+  width: 200px;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  z-index: 1050; 
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.dropdown-item {
+  color: #BDA588;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.dropdown-item:hover {
+  color: #BDA588;
+  background-color: #113b57;
+}
+
+.siteLogo {
+  border-radius:30px;
+  width: 80px;
+  height: 70px;
+}
+
+.nav-link {
+  font-size: 25px;
+  transition: 0.3s;
+  color: #BDA588 !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav-link:hover {
+  font-size: 30px;
+  color: #f5dfc4 !important;
+}
+
+.nav-link.active {
+  color: #f5dfc4 !important;
+}
+
+
+.btn{
+  background-color: #c6a96d;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.btn:hover{
+  background-color:#a5824c ;
+  color: white;
+}
+
+
+
+p,h4,h1{
+  color: #245270;
+  z-index: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ #footer{
+    bottom:0;
+    left:0;
+    right:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:#154666;
+    color:#c6a96d;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  i.fa-instagram, .fa-facebook, .fa-tiktok{
+  font-size: 30px;
+}
+a{
+  color: #BDA588;
+}
