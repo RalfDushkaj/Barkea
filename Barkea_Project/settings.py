@@ -142,5 +142,6 @@ JAZZMIN_SETTINGS = {
   "site_header": "Barkea Panel",
   "site_brand": "Barkea Dashboard",
   "welcome_sign": "Welcome to Barkea Dashboard",
+  "site_logo": "img/barkealogo.jpg"
 }
 

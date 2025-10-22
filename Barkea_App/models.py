@@ -64,6 +64,18 @@ class Footer(models.Model):
     
     def __str__(self):
      return "Footer Links"
+    
+class Reservation(models.Model):
+    name=models.CharField(max_length=30)
+    email=models.EmailField()
+    phone=models.CharField(max_length=20)
+    date=models.DateField(max_length=10)
+    comment=models.TextField()
+
+    def __str__(self):
+        return "Reservation Fields"
+
+
         
     
     
