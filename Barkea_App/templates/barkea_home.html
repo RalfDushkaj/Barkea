@@ -77,7 +77,7 @@
 <div class="container mt-5" data-aos="fade-up">
 	<div class="col mt-5 mb-5 d-flex justify-content-center align-items-center flex-column">
 		<h1 class="header text-center">Barkea Resort</h1>
-		<p class="mt-3 text-center">Dizajni dhe Përshtatja Barkea është një kompleks vilash ekskluzive, të vendosura në një oaz qetësie pranë TEG-ut, ku natyra, dizajni dhe komoditeti ndërthuren në mënyrë të përsosur. Frymëzuar nga bukuria delikate e luleve si Gardenia, Magnolia, Rose dhe të tjera, çdo vilë përfaqëson një identitet të veçantë, një karakter unik dhe një ndjesi personale. Arkitektura bashkëkohore, ndërthurur me elemente natyrore dhe dritë të bollshme natyrale, krijon një mjedis ku çdo detaj flet për jetë të qetë dhe stil të rafinuar.</p>
+		<p class="mt-3 text-center paragraph">Dizajni dhe Përshtatja Barkea është një kompleks vilash ekskluzive, të vendosura në një oaz qetësie pranë TEG-ut, ku natyra, dizajni dhe komoditeti ndërthuren në mënyrë të përsosur. Frymëzuar nga bukuria delikate e luleve si Gardenia, Magnolia, Rose dhe të tjera, çdo vilë përfaqëson një identitet të veçantë, një karakter unik dhe një ndjesi personale. Arkitektura bashkëkohore, ndërthurur me elemente natyrore dhe dritë të bollshme natyrale, krijon një mjedis ku çdo detaj flet për jetë të qetë dhe stil të rafinuar.</p>
 		<a href="{% url 'about' %}" class="btn">MË SHUMË →</a>
 	</div>
 </div>
@@ -274,6 +274,23 @@
         <p class="mb-0">Vlerësimet</p>
       </div>
     </div>
+  </div>
+</div>
+
+
+
+<div class="visit-villa-section position-relative overflow-hidden">
+  <video autoplay muted loop playsinline class="visit-bg-video">
+    <source src="{% static 'video/event_video.mp4' %}" type="video/mp4">
+  </video>
+
+  <div class="visit-overlay-content d-flex flex-column justify-content-center align-items-center text-center">
+    <h2 class="mb-3 text-white">Vizitoni vilat tona nga afër</h2>
+    <p class="mb-4 text-white">
+      Jeni të mirëpritur të vini dhe të shihni nga afër komfortin, dizajnin dhe ambientet që Barkea Resort ofron.
+      Organizojmë vizita të personalizuara për ju dhe familjen tuaj, për t'ju ndihmuar të bëni zgjedhjen e duhur për shtëpinë tuaj të ardhshme.
+    </p>
+    <a href="{% url 'events' %}" class="btn btn-light btn-lg">Rezervo një vizitë →</a>
   </div>
 </div>
 
