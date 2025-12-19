@@ -23,4 +23,3 @@ Barkea është një vend ku krijohet komunitet. Me ambiente të përbashkëta t�
 Identiteti i Markës Barkea
 Barkea është simbol i një jete të qetë, të bukur dhe të ekuilibruar. Frymëzuar nga natyra dhe e ndërtuar me kujdes për detajin, është zgjedhja ideale për ata që kërkojnë një shtëpi që ofron më shumë se katër mure – një vend ku fryma e luleve takon elegancën urbane. Në Barkea, çdo vilë është një histori më vete, një hapësirë që pret të bëhet pjesë e kujtimeve të përjetshme.
 
-https://dijonalbania.com/
